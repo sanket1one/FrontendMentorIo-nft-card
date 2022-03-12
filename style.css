@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: hsl(217, 54%, 11%);
+    font-family:'Outfit',sans-serif;
+    font-weight: 300;
+    color:hsl(215, 51%, 70%);
+}
+
+.container{
+    /* background: hsl(216, 50%, 16%); */
+    display:flex;
+    justify-content: center;
+    padding-top:65px;
+}
+
+.card {
+    width:330px;
+    background:hsl(216, 50%, 16%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    padding:25px;
+    position: absolute;
+}
+
+.card .image{
+    position: static;
+    width:270px;
+    height:270px;    
+}
+
+
+.card .image img{
+    width:100%;
+    /* height: auto; */
+    border-radius: 10px;
+}
+
+.overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .8s ease;
+    background-color: rgba(0,255,247,0.5);
+    transform:translateY(-101%);
+    border-radius:10px;
+  }
+  
+.image:hover .overlay {
+    opacity: 1;
+    cursor:pointer;
+}
+
+
+.icon {
+    width:30px;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+}
+
+.info_container{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.info_container .card-heading{
+    padding-top:15px;
+    font-size:20px;
+    font-weight: 600;
+    color:#eee;
+}
+
+.card-heading:hover{
+    color:hsl(178, 100%, 50%);
+    cursor:pointer;
+}
+
+.info_container .card-content{
+    padding-top:15px;
+    padding-bottom:10px;
+    line-height:1.6;
+    font-weight:300;
+}
+
+.info_container .value{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 0 5px 0;
+    color:hsl(178, 100%, 50%);
+}
+
+.value .value-price{
+    display:flex;
+}
+
+.info_container .value div span{
+    display: flex;
+    flex-direction:row;
+    column-gap: 0.5rem;
+    color:hsl(215, 51%, 70%);
+}
+
+.creater{
+    border-top:solid 2px hsl(215, 32%, 27%);
+    display:flex;
+    column-gap: 2rem;
+    padding:15px 0px 10px 0px;
+}
+
+.creater .creater-image{
+    display: flex;
+    align-items: center;
+}
+
+.creater .creater-image img{
+    padding:0px;
+    margin:0px;
+    width:30px;
+    height:30px;
+    border:solid 2px #fff;
+    border-radius: 50%;
+}
+
+.creater .name{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.name span{
+    color:#fff;
+}
+
+.name span:hover{
+    color:aqua;
+    cursor:pointer;
+}
